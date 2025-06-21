@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QLISOFT - Sistema de Gestão Empresarial</title>
+    <link rel="stylesheet" href="assets1/css/all1.min.css">
+    <link rel="stylesheet" href="assets1/css/jsdelivr.min.css">
+    <script src="assets1/js/tailwindcdn1.js"></script>
+    <!-- Swiper CSS -->
+    <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    -->
+
+
+
+
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-border {
+            position: relative;
+        }
+
+        .tech-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 0.75rem;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(99, 102, 241, 0.5));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .footer-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!---
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-2 rounded-lg mr-3 shadow-md">
+                    <i class="fas fa-cube text-2xl"></i>
+                    <img src="img/logoo.png" alt="logo" class="h-5 w-auto" />
+                </div>
+                -->
+
+                <div class="mr-3">
+                    <i class="fas fa-cube text-2xl"></i>
+                    <img src="img/logo1.png" alt="logo" class="h-10 w-auto" />
+                </div>
+                
+                <!--
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    QLISOFT</h1>
+                -->
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-all">Início</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-all">Soluções</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-all">Preços</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-all">Clientes</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-all">Contato</a>
+            </nav>
+
+            <div class="hidden md:flex space-x-4">
+                <a href="#"
+                    class="px-4 py-2 text-blue-600 font-medium hover:bg-blue-50 rounded-lg transition-all">Login</a>
+                <a href="#"
+                    class="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-md">Demonstração</a>
+            </div>
+
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Transforme sua gestão empresarial com
+                        o NewSOFT</h2>
+                    <p class="text-xl mb-8 opacity-90">O sistema completo para gestão financeira, estoque, vendas e
+                        muito mais. Tudo integrado em uma única plataforma.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#"
+                            class="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 text-center transition-all shadow-lg">Solicitar
+                            Demonstração</a>
+                        <a href="#"
+                            class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 text-center transition-all">Conhecer
+                            Funcionalidades</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="tech-border rounded-xl overflow-hidden shadow-2xl">
+                        <img src="img/card3.png" alt="Dashboard NewSOFT" class="w-full max-w-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="bg-gray-50 py-12 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-500 mb-8">Confiado por empresas líderes</p>
+            <div class="relative">
+                <div class="flex gap-8 animate-scroll-slow w-max">
+                    <!-- Flyers reais com tamanho maior -->
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao3.png" alt="Empresa 1" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao4.webp" alt="Empresa 2" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao5.jpg" alt="Empresa 3" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao6.png" alt="Empresa 4" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao2.png" alt="Empresa 5" class="object-cover h-full w-full" />
+                    </div>
+
+                    <!-- Repetição para loop contínuo -->
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao3.png" alt="Empresa 1" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao4.webp" alt="Empresa 2" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao5.jpg" alt="Empresa 3" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao6.png" alt="Empresa 4" class="object-cover h-full w-full" />
+                    </div>
+                    <div
+                        class="h-60 w-56 bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+                        <img src="img/ilustracao2.png" alt="Empresa 5" class="object-cover h-full w-full" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS personalizado para animação contínua -->
+    <style>
+        @keyframes scroll-slow {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll-slow {
+            animation: scroll-slow 30s linear infinite;
+        }
+    </style>
+
+
+
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tudo que sua empresa precisa em um só lugar</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">O NewSOFT oferece módulos integrados para todas as
+                    áreas da sua empresa, proporcionando eficiência e controle total.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border">
+                    <div
+                        class="bg-gradient-to-br from-blue-100 to-blue-50 text-blue-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Gestão Financeira</h3>
+                    <p class="text-gray-600">Controle completo de contas a pagar e receber, fluxo de caixa, conciliação
+                        bancária e relatórios financeiros detalhados.</p>
+                </div>
+
+
+                <!-- Feature 2 -->
+                <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border"">
+                    <div
+                        class=" bg-gradient-to-br from-green-100 to-green-50 text-green-600 w-16 h-16 rounded-lg flex
+                    items-center justify-center mb-6 shadow-sm">
+                    <i class="fas fa-boxes text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Controle de Estoque</h3>
+                <p class="text-gray-600">Gestão inteligente de inventário com alertas de reposição, controle de
+                    lotes e validade, e integração com compras e vendas.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border">
+                <div
+                    class="bg-gradient-to-br from-purple-100 to-purple-50 text-purple-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Vendas e PDV</h3>
+                <p class="text-gray-600">Sistema completo de vendas com emissão de NFC-e, controle de comissões,
+                    orçamentos e integração com marketplaces.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border">
+                <div
+                    class="bg-gradient-to-br from-yellow-100 to-yellow-50 text-yellow-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">CRM</h3>
+                <p class="text-gray-600">Gestão de relacionamento com clientes, histórico de compras, campanhas de
+                    marketing e análise de perfil de consumo.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border">
+                <div
+                    class="bg-gradient-to-br from-red-100 to-red-50 text-red-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                    <i class="fas fa-file-invoice-dollar text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Fiscal e Contábil</h3>
+                <p class="text-gray-600">Emissão de documentos fiscais, SPED, EFD e integração com contabilidade
+                    para garantir conformidade com a legislação.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card p-8 rounded-xl bg-white shadow-md tech-border">
+                <div
+                    class="bg-gradient-to-br from-indigo-100 to-indigo-50 text-indigo-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                    <i class="fas fa-mobile-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Acesso Mobile</h3>
+                <p class="text-gray-600">Acompanhe e gerencie seu negócio de qualquer lugar com nosso aplicativo
+                    disponível para iOS e Android.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Veja o NewSOFT em ação</h2>
+                    <p class="text-xl text-gray-600 mb-8">Agende uma demonstração personalizada e descubra como o
+                        NewSOFT pode transformar a gestão da sua empresa.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-1 mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Demonstração ao vivo com um de nossos especialistas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-1 mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Resposta para todas as suas dúvidas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-1 mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Análise das necessidades específicas do seu negócio</span>
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-lg hover:from-blue-600 hover:to-blue-700 inline-block transition-all shadow-lg">Agendar
+                        Demonstração</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-lg opacity-30 blur-lg"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-100 rounded-lg opacity-30 blur-lg">
+                        </div>
+                        <div class="relative bg-white p-2 rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+                            <div class="bg-gray-800 rounded-t-lg p-3 flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <img src="img/card5.jpg" alt="NewSOFT Demo" class="rounded-b-lg w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que nossos clientes dizem</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Empresas de diversos segmentos já transformaram sua gestão com o NewSOFT.
+                </p>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide testimonial-card p-8 rounded-xl bg-white shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-6">"O NewSOFT revolucionou nossa gestão. Em 3 meses já tivemos um
+                            ganho de eficiência que reduziu nossos custos operacionais em 22%."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
+                                <img src="img/testimonial1.jpg" alt="Cliente" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">João Silva</p>
+                                <p class="text-gray-500 text-sm">Diretor na Empresa X</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide testimonial-card p-8 rounded-xl bg-white shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-6">"A facilidade de uso e os relatórios precisos nos deram uma visão
+                            completa do nosso negócio."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
+                                <img src="img/testimonial2.jpg" alt="Cliente" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">Maria Costa</p>
+                                <p class="text-gray-500 text-sm">Gerente na FarmaPlus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide testimonial-card p-8 rounded-xl bg-white shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-6">"Desde que começamos a usar o NewSOFT, nossa equipe está mais
+                            alinhada e produtiva."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
+                                <img src="img/testimonial5.jpg" alt="Cliente" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">Carlos Mendes</p>
+                                <p class="text-gray-500 text-sm">CEO da ConectaTech</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide testimonial-card p-8 rounded-xl bg-white shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-6">"Desde que começamos a usar o NewSOFT, nossa equipe está mais
+                            alinhada e produtiva."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
+                                <img src="img/testimonial4.jpg" alt="Cliente" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">Carlos Mendes</p>
+                                <p class="text-gray-500 text-sm">CEO da ConectaTech</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide testimonial-card p-8 rounded-xl bg-white shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-6">"Desde que começamos a usar o NewSOFT, nossa equipe está mais
+                            alinhada e produtiva."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
+                                <img src="img/testimonial3.jpg" alt="Cliente" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">Carlos Mendes</p>
+                                <p class="text-gray-500 text-sm">CEO da ConectaTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="assets1/js/jsdelivr.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            speed: 5000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,  // continua rodando mesmo com mouse em cima
+            },
+            freeMode: true,
+            freeModeMomentum: false,
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+            spaceBetween: 30,
+        });
+
+
+    </script>
+
+    <footer class="bg-gray-100 py-6">
+        <div
+            class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-gray-700 text-sm">
+
+            <!-- Logo -->
+            <div class="mb-4 md:mb-0">
+                <img src="img/logo.png" alt="NewSOFT Logo" class="h-10">
+            </div>
+
+            <!-- Copyright -->
+            <div class="mb-4 md:mb-0">
+                &copy; 2025 NewSOFT. Todos os direitos reservados.
+            </div>
+
+            <!-- Localização -->
+            <div class="mb-4 md:mb-0">
+                📍 Rua Principal, 123, Luanda, Angola
+            </div>
+
+            <!-- Contatos -->
+            <div class="mb-4 md:mb-0">
+                📞 +244 912 345 678 | ✉️ contato@newsoft.com
+            </div>
+
+            <!-- Criador -->
+            <div>
+                Desenvolvido por <a href="https://qlisoft.com" target="_blank"
+                    class="text-blue-600 hover:underline">QLISOFT LDA</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+</html>
